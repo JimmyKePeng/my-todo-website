@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-App</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let changeButton = document.getElementById("clickChangeName");
+            changeButton.addEventListener("click", ()=>{
+                console.log("clicked");
+                document.getElementById("nameID").innerText = "Hello " + document.getElementById("enteredName").value;
+            })
+        });
+    </script> -->
+</head>
+<body>
+    <div class="container">
+        <div class="myNarbar">
+  
+            <a class="narbar-item" href="/">Home</a>
+            <a class="narbar-item" href="/about">About</a>
+            <a class="narbar-item" href="/contact">Contact</a>
+       
+        </div>
+        <div class="topCenterText"> 
+            <h1>To-Do-App</h1>
+            <!-- <h3> // This looks like a to-do list now. dont forget to remove css flex-direction</h3> -->
+        </div>
+
+        <div class="bodyRight">
+
+            <h4>Add a to do list: </h1>
+            <div class="postArea">
+                <form method="post" action="/newTodo">
+                    <!-- <label> new post </label> -->
+                    <input type="text" name="title" required placeholder="Title">
+                    <textarea name="newTodo" rows="6" required placeholder="New to do here" ></textarea>
+                    <button id="post-button" type="submit"> Add </button>
+                </form>
+            </div>
+        </div>
+
+            
+        <div class="body-display">
+
+
+

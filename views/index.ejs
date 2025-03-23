@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+
+<h1 id="nameID">Hello 
+    <% if(locals.name) {%>
+        <%= name %>
+        <% } else {%>
+        There!
+        <% }%>
+</h1>
+
+<!-- <div>
+    <label>name: </label>
+    <input type="text" id="enteredName"placeholder="Javascript name change">
+    <button id="clickChangeName"> change </button>
+</div> -->
+
+<form method="post" action="/submit">
+    <label> name: </label>
+    <input type="text" name="name" placeholder="Enter your name:">
+    <input type="submit" value="enter">
+</form>
+
+
+
+<% if(locals.posts) {%>
+<% for (let i = 0; i < posts.length; i++) {%>
+    <div class="single-post">
+        <h4 style="color: rgb(68, 73, 221)"> <%=i+1%>.<%= posts[i]["title"]%></h4>
+        <h4 style="color: rgb(68, 73, 221)"> <%= posts[i]["to-do"]%></h4>
+        <h6 style="color: rgb(155, 75, 75)"> <%= posts[i]["time"] %> </h6>
+        <form  action="/deleteTodo" method="post">
+            <input type="hidden" name="index" value="<%= i %>" />
+            <button class="postDelete" type="submit">Delete</button>
+        </form>
+    </div> 
+    <% } %>
+<% }%>
+
+
+<%- include("partials/footer.ejs") %>
