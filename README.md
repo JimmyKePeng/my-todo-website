@@ -1,4 +1,4 @@
-Building a blog web from scratch.
+Building a to-do web app from scratch.
 working in progress.
 
 Node.js: Used as the runtime environment for the backend, enabling efficient handling of server-side operations.
